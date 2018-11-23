@@ -7,7 +7,30 @@ const rfcSchema = new Schema ({
     required: true,
   },
   tipo: {
-    required: true,
+    type: String,
+    enum: ['Tipo', 'Comisiones', 'Transacciones'],
+    default: 'Tipo',
+    required: true
+  },
+  mes: {
+    type: String,
+    enum: [
+      'Mes',
+      'Enero',
+      'Febrero',
+      'Marzo',
+      'Abril',
+      'Mayo',
+      'Junio',
+      'Julio',
+      'Agosto',
+      'Septiembre',
+      'Octubre',
+      'Noviembre',
+      'Diciembre'
+    ],
+    default: 'Mes',
+    required: true
   }
 }, {
   timestamps: {
