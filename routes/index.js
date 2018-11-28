@@ -12,7 +12,7 @@ router.post('/', (req, res, next) => {
   
   let {rfc} = req.body;
 
-  const newRfc = new Factura({rfc});
+  const newRfc = new Factura(req.body);
 
   newRfc.save((err, f) => {
     if(err){
@@ -29,7 +29,7 @@ router.post('/', (req, res, next) => {
 
 
 
-  console.log(rfc)
+  console.log('body', req.body);
 
 });
 

@@ -31,6 +31,10 @@ const rfcSchema = new Schema ({
     ],
     default: 'Mes',
     required: true
+  },
+  frecuencia: {
+    type: String,
+    enum: ['una vez', 'mensual']
   }
 }, {
   timestamps: {
