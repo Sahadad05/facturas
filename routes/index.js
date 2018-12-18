@@ -9,8 +9,8 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-  
-  let {rfc} = req.body;
+
+  // let {rfc} = req.body;
 
   const newRfc = new Factura(req.body);
 
@@ -27,11 +27,8 @@ router.post('/', (req, res, next) => {
     });
   })
 
-
-
   console.log('body', req.body);
 
 });
-
 
 module.exports = router;

@@ -4,7 +4,6 @@ const Schema = mongoose.Schema
 const rfcSchema = new Schema ({
   rfc: {
     type: String,
-    required: true,
   },
   tipo: {
     type: String,
